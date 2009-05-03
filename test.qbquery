@@ -1,0 +1,39 @@
+﻿show variables like 'have_innodb';
+show databases;
+use test;
+create table mes_numeros (
+ numero int NOT NULL auto_increment,
+ nom varchar(32) NOT NULL,
+ PRIMARY KEY (numero)
+);
+select count(*) from mes_numeros;
+insert into mes_numeros (nom) values ('francis');
+insert into mes_numeros (nom) values ('robert');
+insert into mes_numeros (nom) values ('nicolas');
+insert into mes_numeros (nom) values ('bite');
+insert into mes_numeros (nom) values ('falfred');
+select * from mes_numeros;
+
+create table logins (
+  name varchar(32) NOT NULL,
+  pass varchar(32) NOT NULL,
+  PRIMARY KEY (name)
+);
+
+insert into logins (name, pass) values ('nico', 'secret');
+
+select count(*) from logins;
+select * from logins;
+
+create table accounts (
+  name varchar(32) NOT NULL,
+  detail varchar(32) NOT NULL,
+  PRIMARY KEY (name)
+);
+
+desc accounts;
+
+insert into logins (name, detail) values ('nico', 'bibi:+20');
+
+select count(*) from accounts;
+select * from accounts;
